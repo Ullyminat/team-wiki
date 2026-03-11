@@ -16,6 +16,10 @@ services:
       - DATABASE_URL=postgresql://wiki_user:wiki_password@db:5432/team_wiki?schema=public
       - NEXTAUTH_SECRET=G9i8t2pX7nQ3mE1vB5zC8wK9sF2jL5hA
       - NEXTAUTH_URL=http://localhost:3000
+      - MINIO_ENDPOINT=minio
+      - MINIO_PORT=9000
+      - MINIO_ACCESS_KEY=admin
+      - MINIO_SECRET_KEY=password123
     depends_on:
       db:
         condition: service_healthy
